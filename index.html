@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" type="text/css" href="./app.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body onload="GeneratePwd()">
+    <form>
+      <main>
+        <div class="container">
+          <h1>Password Generator</h1>
+          <div class="pwdClipBoard"><label id="lblPassword"></label></div>
+          <div class="pwdConfig">
+            <div class="pwdLength">
+              <span>Character Length </span>
+              <span><input type="text" value="10" id="txtPwdLength" /></span>
+            </div>
+            <div class="checkBoxList">
+              <div class="chkBoxItem">
+                <input type="checkbox" id="chkUpperCase" name="chkUpperCase" />
+                <label for="chkUpperCase"> Include Uppercase Letters</label>
+              </div>
+              <div class="chkBoxItem">
+                <input type="checkbox" id="chkLowerCase" name="chkLowerCase" />
+                <label for="chkUpperCase"> Include Lowercase Letters</label>
+              </div>
+              <div class="chkBoxItem">
+                <input type="checkbox" id="chkLowerCase" name="chkLowerCase" />
+                <label for="chkUpperCase"> Include Numbers</label>
+              </div>
+              <div class="chkBoxItem">
+                <input type="checkbox" id="chkLowerCase" name="chkLowerCase" />
+                <label for="chkUpperCase"> Include Symbols</label>
+              </div>
+            </div>
+            <div class="ShowPwdStrength">
+              <span>Strength</span>
+              <div>
+                <span class="str" id="str-1"></span>
+                <span class="str" id="str-2"></span>
+                <span class="str" id="str-3"></span>
+                <span class="str" id="str-4"></span>
+                <span class="str" id="str-5"></span>
+              </div>
+            </div>
+            <div>
+              <button class="btn-Generate" id="btnGenerate">Generate</button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </form>
+    <script type="text/javascript" src="generate.js"></script>
+  </body>
+</html>
