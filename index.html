@@ -10,27 +10,39 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+    <link rel="stylesheet" type="text/css" href="./reset.css" />
 
     <link rel="stylesheet" type="text/css" href="./app.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
 
     <title>Frontend Mentor | Password generator app</title>
   </head>
   <body onload="GeneratePwd()">
     <form>
       <main>
+        <div>
+          <h1>
+            <label id="pwdCopiedToClipBoard"></label>
+          </h1>
+        </div>
         <div class="container">
           <h1>Password Generator</h1>
-          <div class="pwdClipBoard"><label id="lblPassword"></label></div>
-          <div class="pwdConfig">
+          <div class="box pwdClipBoard">
+            <span><label id="lblPassword"></label></span>
+            <span id="imgCopyToClipBoard"
+              ><img
+                src="assets/images/icon-copy.svg"
+                id="imgCopyToClipBoard"
+                alt=""
+            /></span>
+          </div>
+          <div class="box pwdConfig">
             <div class="pwdLength">
               <span>Character Length </span>
-              <span><input type="text" value="10" id="txtPwdLength" /></span>
+              <span><label id="lblLength">10</label></span>
+            </div>
+            <div class="slider">
+              <div class="circle"></div>
+              <div class="sliderbar"></div>
             </div>
             <div class="checkBoxList">
               <div class="chkBoxItem">
@@ -39,30 +51,30 @@
               </div>
               <div class="chkBoxItem">
                 <input type="checkbox" id="chkLowerCase" name="chkLowerCase" />
-                <label for="chkUpperCase"> Include Lowercase Letters</label>
+                <label for="chkLowerCase"> Include Lowercase Letters</label>
               </div>
               <div class="chkBoxItem">
-                <input type="checkbox" id="chkLowerCase" name="chkLowerCase" />
-                <label for="chkUpperCase"> Include Numbers</label>
+                <input type="checkbox" id="chkNumbers" name="chkNumbers" />
+                <label for="chkNumbers"> Include Numbers</label>
               </div>
               <div class="chkBoxItem">
-                <input type="checkbox" id="chkLowerCase" name="chkLowerCase" />
-                <label for="chkUpperCase"> Include Symbols</label>
+                <input type="checkbox" id="chkSymbols" name="chkSymbols" />
+                <label for="chkSymbols"> Include Symbols</label>
               </div>
             </div>
             <div class="ShowPwdStrength">
-              <span>Strength</span>
+              <p>Strength</p>
               <div>
-                <span class="str" id="str-1"></span>
-                <span class="str" id="str-2"></span>
-                <span class="str" id="str-3"></span>
-                <span class="str" id="str-4"></span>
-                <span class="str" id="str-5"></span>
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
             </div>
-            <div>
-              <button class="btn-Generate" id="btnGenerate">Generate</button>
-            </div>
+
+            <button class="btn-Generate" id="btnGenerate">
+              Generate
+              <img src="assets/images/icon-arrow-right.svg" alt="" />
+            </button>
           </div>
         </div>
       </main>
