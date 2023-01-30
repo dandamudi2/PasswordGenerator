@@ -19,8 +19,10 @@ body{
     
 }
 
-.container h1{
+.container h3{
     text-align: center;
+    margin-bottom: 20px;
+    color:#7c7889;
 }
 
 .box{
@@ -99,6 +101,12 @@ body{
     font-weight: bold;
     margin-bottom: 1.2px;
     border: 0;
+}
+
+.btn-Generate1{
+
+   width:100%;
+
 }
 
 input[type='text'] {
